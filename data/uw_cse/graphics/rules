@@ -1,0 +1,131 @@
+1.0 !taughtBy(c, p, q) v !courseLevel(c, Level_500) v professor(p)
+
+1.0 !taughtBy(c, p, q) v !student(p) v !courseLevel(c, Level_500)
+
+1.0 !taughtBy(c, p, q) v !student(p) v !inPhase(p, Pre_Quals)
+
+1.0 !taughtBy(c, p, q) v !student(p) v !yearsInProgram(p, Year_1)
+
+1.0 !tempAdvisedBy(p, s) v professor(p)
+
+1.0 !tempAdvisedBy(p, s) v student(s)
+
+1.0 !tempAdvisedBy(p, s) v hasPosition(p, Faculty)
+
+1.0 !tempAdvisedBy(p, s) v inPhase(s, Pre_Quals)
+
+1.0 !taughtBy(c, p, q) v !courseLevel(c, Level_500) v !ta(c, s, q) v advisedBy(s, p) v tempAdvisedBy(s,p)
+
+1.0 !advisedBy(p, s) v student(s)
+
+1.0 !advisedBy(p, s) v professor(p)
+
+1.0 !advisedBy(p, s) v !yearsInProgram(p, Year_1)
+
+1.0 !publication(p, x) v !publication(p,y) v !student(x) v student(y) v professor(y)
+
+1.0 !publication(p, x) v !publication(p,y) v !student(x) v student(y) v advisedBy(x,y) v tempAdvisedBy(x,y)
+
+1.0 !professor(x) v !student(y)
+
+1.0 !student(x) v advisedBy(x,y) v tempAdvisedBy(x,y)
+
+1.0 !professor(p) v !hasPosition(p, Faculty) v taughtBy(c, p, q)
+
+1.0 !inPhase(s, Post_Quals) v !yearsInProgram(s, Year_1)
+
+1.0 !inPhase(s, Post_Quals) v !inPhase(s, Post_Generals)
+
+1.0 !inPhase(s, Post_Generals) v !inPhase(s, Pre_Quals)
+
+1.0 !professor(p) v hasPosition(p, Faculty) v hasPosition(p, Faculty_affiliate) v hasPosition(p, Faculty_adjunct) v hasPosition(p, Faculty_emeritus) v hasPosition(p, Faculty_visiting)
+
+1.0 !hasPosition(p, Faculty_visiting) v !advisedBy(s, p)
+
+1.0 !professor(x) v !hasPosition(x, Faculty) v advisedBy(s,x) v tempAdvisedBy(s,x)
+
+1.0 !student(p) v yearsInProgram(p, Year_1) v ta(c, p, q)
+
+1.0 !tempAdvisedBy(x,y) v !hasPosition(x,Faculty_visiting)
+
+1.0 !tempAdvisedBy(x,y) v yearsInProgram(x,Year_1) v yearsInProgram(x,Year_2)
+
+1.0 !tempAdvisedBy(x,y) v inPhase(x,Pre_Quals)
+
+1.0 !student(x) v inPhase(x,Pre_Quals) v inPhase(x,Post_Quals) v inPhase(x,Post_Generals)
+
+1.0 !inPhase(x,Pre_Quals) v !inPhase(x,Post_Quals)
+
+1.0 !hasPosition(x,y) v !hasPosition(x,z) v samePosition(y,z)
+
+1.0 !advisedBy(a,a) v !advisedBy(a,a)
+
+1.0 !tempAdvisedBy(a,a) v !tempAdvisedBy(a,a)
+
+1.0 !advisedBy(a,b) v !advisedBy(b,a)
+
+1.0 !tempAdvisedBy(a,b) v !tempAdvisedBy(b,a)
+
+1.0 !advisedBy(s, p) v samePerson(p,q) v !advisedBy(s, q)
+
+1.0 !tempAdvisedBy(s, p) v samePerson(p,q) v !tempAdvisedBy(s, q)
+
+1.0 !tempAdvisedBy(s, p) v !advisedBy(s, q)
+
+1.0 !inPhase(s,Pre_Quals) v !advisedBy(s,p)
+
+1.0 !inPhase(s,Post_Quals) v !tempAdvisedBy(s,p)
+
+1.0 !inPhase(s,Post_Generals) v !tempAdvisedBy(s,p)
+
+1.0 !inPhase(s,Post_Quals) v !taughtBy(c,p,q) v !ta(c,s,q) v courseLevel(c,Level_100) v advisedBy(s,p)
+
+1.0 !inPhase(s,Post_Quals) v !taughtBy(c,p,q) v ta(c,s,q) v courseLevel(c,Level_100) v !advisedBy(s,p)
+
+1.0 !inPhase(s,Post_Quals) v taughtBy(c,p,q) v !ta(c,s,q) v courseLevel(c,Level_100) v !advisedBy(s,p)
+
+1.0 !inPhase(s,Post_Generals) v !taughtBy(c,p,q) v !ta(c,s,q) v courseLevel(c,Level_100) v advisedBy(s,p)
+
+1.0 !inPhase(s,Post_Generals) v !taughtBy(c,p,q) v ta(c,s,q) v courseLevel(c,Level_100) v !advisedBy(s,p)
+
+1.0 !inPhase(s,Post_Generals) v taughtBy(c,p,q) v !ta(c,s,q) v courseLevel(c,Level_100) v !advisedBy(s,p)
+
+1.0 !publication(t,a) v !publication(t,b) v samePerson(a,b) v advisedBy(a,b) v advisedBy(b,a)
+
+1.0 !publication(t,a) v !publication(t,b) v samePerson(a,b) v !professor(a) v !student(b) v advisedBy(b,a)
+
+1.0 !advisedBy(s,p) v !publication(t,s) v publication(t,p)
+
+1.0 !taughtBy(c, p, q) v professor(p)
+
+1.0 !hasPosition(p, x) v professor(p)
+
+1.0 !advisedBy(s, p) v student(s)
+
+1.0 !advisedBy(s, p) v professor(p)
+
+1.0 !inPhase(p, x) v student(p)
+
+1.0 !tempAdvisedBy(s, p) v student(s)
+
+1.0 !tempAdvisedBy(s, p) v professor(p)
+
+1.0 !yearsInProgram(p, x) v student(p)
+
+1.0 !ta(c, p, q) v student(p)
+
+1.0 student(p) v professor(p)
+
+1.0 !student(p) v !professor(p)
+
+1.0 !inPhase(p, x) v samePhase(x,y) v !inPhase(p, y)
+
+1.0 !yearsInProgram(p, x) v sameInteger(x,y) v !yearsInProgram(p, y)
+
+1.0 !taughtBy(x, p, q) v sameCourse(x,y) v !taughtBy(y, p, q)
+
+1.0 !taughtBy(c, x, q) v samePerson(x,y) v !taughtBy(c, y, q)
+
+1.0 !ta(x, p, q) v sameCourse(x,y) v !ta(y, p, q)
+
+1.0 !ta(c, x, q) v samePerson(x,y) v !ta(c, y, q)

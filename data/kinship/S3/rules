@@ -1,0 +1,45 @@
+1.0 !father(x, z) v !mother(y, z) v husband(x, y)
+
+1.0 !father(x, z) v !husband(x, y) v mother(y, z)
+
+1.0 !husband(x, y) v wife(y, x)
+
+1.0 !son(y, x) v father(x, y) v mother(x, y)
+
+1.0 !daughter(y, x) v father(x, y) v mother(x, y)
+
+1.0 !father(x, y) v son(y, x) v daughter(y, x)
+
+1.0 !mother(x, y) v son(y, x) v daughter(y, x)
+
+
+
+1.0 !son(y, x) v child(y, x)
+
+1.0 !daughter(y, x) v child(y, x)
+
+1.0 !husband(x, y) v male(x)
+
+1.0 !husband(x, y) v female(y)
+
+1.0 !wife(x, y) v female(x)
+
+1.0 !wife(x, y) v male(y)
+
+1.0 !father(x, y) v male(x)
+
+1.0 !mother(x, y) v female(x)
+
+1.0 !son(x, y) v male(x)
+
+1.0 !daughter(x, y) v female(x)
+
+1.0 !female(x) v !child(y, x) v mother(x, y)
+
+1.0 !male(x) v !child(y, x) v father(x, y)
+
+1.0 !female(x) v !child(x, y) v daughter(x, y)
+
+1.0 !male(x) v !child(x, y) v son(x, y)
+
+1.0 !male(x) v !female(x)

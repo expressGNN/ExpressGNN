@@ -1,0 +1,11 @@
+Author(bib,author)
+Title(bib,title)
+Venue(bib,venue)
+SameBib(bib,bib)
+SameAuthor(author,author)
+SameTitle(title,title)
+SameVenue(venue,venue)
+
+HasWordAuthor(author, word)
+HasWordTitle(title, word)
+HasWordVenue(venue, word)
